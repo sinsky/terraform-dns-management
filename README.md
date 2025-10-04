@@ -62,7 +62,7 @@ export TF_VAR_cloudflare_zone_id_sinsky_cc="your_zone_id_for_sinsky.cc"
 ### 初期化
 
 ```bash
-terraform init
+terraform init -backend-config="conn_str=$TERRAFORM_BACKEND_CONN_STR"
 ```
 
 ### 計画の確認
