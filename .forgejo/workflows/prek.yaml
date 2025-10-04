@@ -1,0 +1,17 @@
+name: Prek Code Quality Checks
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  prek:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v5
+      - name: Run Prek checks
+        uses: j178/prek-action@e216c4c287eb0629a8f271855e990c2548d1464a # v1
+        with:
+          extra-args: --skip hadolint-docker
