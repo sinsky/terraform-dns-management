@@ -1,0 +1,40 @@
+mx-1:
+  name: "@"
+  type: MX
+  content: mx1.simplelogin.co.
+  priority: 10
+  comment: "MX Record in SimpleLogin.io"
+mx-2:
+  name: "@"
+  type: MX
+  content: mx2.simplelogin.co.
+  priority: 20
+  comment: "MX Record in SimpleLogin.io"
+spf:
+  name: "@"
+  type: TXT
+  content: "v=spf1 include:simplelogin.co ~all"
+  comment: "SPF Record in SimpleLogin.io"
+dkim-1:
+  name: dkim._domainkey
+  type: CNAME
+  content: dkim._domainkey.simplelogin.co
+  comment: "DKIM Record in SimpleLogin.io"
+  proxied: false
+dkim-2:
+  name: dkim02._domainkey
+  type: CNAME
+  content: dkim02._domainkey.simplelogin.co
+  comment: "DKIM Record in SimpleLogin.io"
+  proxied: false
+dkim-3:
+  name: dkim03._domainkey
+  type: CNAME
+  content: dkim03._domainkey.simplelogin.co
+  comment: "DKIM Record in SimpleLogin.io"
+  proxied: false
+dmark:
+  name: _dmarc
+  type: TXT
+  content: "v=DMARC1; p=quarantine; pct=100; adkim=s; aspf=s"
+  comment: "DMARC Record in SimpleLogin.io"
