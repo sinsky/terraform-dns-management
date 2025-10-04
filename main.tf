@@ -14,3 +14,9 @@ module "sinsky_me" {
   api_token = var.cloudflare_api_token_sinsky_me
   zone_id   = var.cloudflare_zone_id_sinsky_me
 }
+
+module "sinsky_cc" {
+  source    = "./modules/sinsky.cc"
+  api_token = var.cloudflare_api_token_sinsky_cc
+  zone_id   = var.cloudflare_zone_id_sinsky_cc
+}

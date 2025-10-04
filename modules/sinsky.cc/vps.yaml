@@ -1,0 +1,18 @@
+beszel:
+  name: beszel
+  type: A
+  content: 96.44.158.125
+  proxied: false
+  comment: "Beszel App in RackNerd VPS"
+tf:
+  name: tf
+  type: A
+  content: 96.44.158.125
+  proxied: false
+  comment: "Traefik App in RackNerd VPS"
+tinyauth:
+  name: tinyauth
+  type: A
+  content: 96.44.158.125
+  proxied: false
+  comment: "TinyAuth App in RackNerd VPS"
