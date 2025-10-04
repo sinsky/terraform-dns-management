@@ -191,6 +191,40 @@ terraform import 'module.domain.cloudflare_record.records["index"]' zone_id/reco
 ## Terraform ドキュメント
 
 <!-- BEGIN_TF_DOCS -->
+## Requirements
+
+| Name | Version |
+|------|---------|
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | 1.13.3 |
+| <a name="requirement_cloudflare"></a> [cloudflare](#requirement\_cloudflare) | ~> 5 |
+
+## Providers
+
+No providers.
+
+## Modules
+
+| Name | Source | Version |
+|------|--------|---------|
+| <a name="module_sinsky_cc"></a> [sinsky\_cc](#module\_sinsky\_cc) | ./modules/sinsky.cc | n/a |
+| <a name="module_sinsky_me"></a> [sinsky\_me](#module\_sinsky\_me) | ./modules/sinsky.me | n/a |
+
+## Resources
+
+No resources.
+
+## Inputs
+
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_cloudflare_api_token_sinsky_cc"></a> [cloudflare\_api\_token\_sinsky\_cc](#input\_cloudflare\_api\_token\_sinsky\_cc) | Cloudflare API token for sinsky.cc zone | `string` | n/a | yes |
+| <a name="input_cloudflare_api_token_sinsky_me"></a> [cloudflare\_api\_token\_sinsky\_me](#input\_cloudflare\_api\_token\_sinsky\_me) | Cloudflare API token for sinsky.me zone | `string` | n/a | yes |
+| <a name="input_cloudflare_zone_id_sinsky_cc"></a> [cloudflare\_zone\_id\_sinsky\_cc](#input\_cloudflare\_zone\_id\_sinsky\_cc) | Cloudflare Zone ID for the sinsky.cc zone | `string` | n/a | yes |
+| <a name="input_cloudflare_zone_id_sinsky_me"></a> [cloudflare\_zone\_id\_sinsky\_me](#input\_cloudflare\_zone\_id\_sinsky\_me) | Cloudflare Zone ID for the sinsky.me zone | `string` | n/a | yes |
+
+## Outputs
+
+No outputs.
 <!-- END_TF_DOCS -->
 
 ## ライセンス
