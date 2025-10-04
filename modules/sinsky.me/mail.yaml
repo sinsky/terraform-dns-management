@@ -1,13 +1,13 @@
 mx-1:
   name: "@"
   type: MX
-  content: mx1.simplelogin.co.
+  content: mx1.simplelogin.co
   priority: 10
   comment: "MX Record in SimpleLogin.io"
 mx-2:
   name: "@"
   type: MX
-  content: mx2.simplelogin.co.
+  content: mx2.simplelogin.co
   priority: 20
   comment: "MX Record in SimpleLogin.io"
 spf:

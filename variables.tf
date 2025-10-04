@@ -1,9 +1,3 @@
-variable "cloudflare_account_id" {
-  description = "Cloudflare Account ID"
-  type        = string
-  sensitive   = true
-}
-
 variable "cloudflare_zone_id_sinsky_me" {
   description = "Cloudflare Zone ID for the sinsky.me zone"
   type        = string
