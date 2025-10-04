@@ -2,7 +2,7 @@
 
 このプロジェクトは、Terraform を使用して Cloudflare DNS レコードを管理します。`sinsky.me`および`sinsky.cc`ドメインの DNS 'A'レコードを管理し、指定された IP アドレスを指すように設定します。
 
-![Terraform](https://img.shields.io/badge/terraform-v1.9+-blue)
+![Terraform](https://img.shields.io/badge/terraform-v1.13+-blue)
 ![Cloudflare](https://img.shields.io/badge/cloudflare-v5.11+-orange)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
