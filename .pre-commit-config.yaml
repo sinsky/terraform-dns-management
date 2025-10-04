@@ -2,9 +2,21 @@
 # See https://pre-commit.com/hooks.html for more hooks
 repos:
   - repo: 'https://github.com/pre-commit/pre-commit-hooks'
-    rev: v5.0.0
+    rev: v6.0.0
     hooks:
       - id: trailing-whitespace
       - id: end-of-file-fixer
       - id: check-yaml
       - id: check-added-large-files
+      # - id: no-commit-to-branch
+  - repo: https://github.com/antonbabenko/pre-commit-terraform
+    rev: v1.101.0
+    hooks:
+      - id: terraform_fmt
+      - id: terraform_validate
+      - id: terraform_docs
+  - repo: https://github.com/bridgecrewio/checkov
+    rev: '3.2.473'
+    hooks:
+      - id: checkov
+        args: ['--framework', 'terraform']

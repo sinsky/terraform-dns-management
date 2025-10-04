@@ -10,8 +10,8 @@ terraform {
 }
 
 locals {
-  vps    = yamldecode(file("${path.module}/vps.yaml"))
-  dns_records   = merge(local.vps)
+  vps         = yamldecode(file("${path.module}/vps.yaml"))
+  dns_records = merge(local.vps)
 }
 
 provider "cloudflare" {
