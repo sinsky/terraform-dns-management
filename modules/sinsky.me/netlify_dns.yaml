@@ -1,0 +1,12 @@
+root:
+  name: "@"
+  type: CNAME
+  content: apex-loadbalancer.netlify.com
+  proxied: false
+  comment: website dns config in Netlify
+www:
+  name: www
+  type: CNAME
+  content: apex-loadbalancer.netlify.com
+  proxied: false
+  comment: website dns config in Netlify
