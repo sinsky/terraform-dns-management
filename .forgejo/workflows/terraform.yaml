@@ -1,0 +1,60 @@
+name: Terraform CI/CD
+
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - 'README.md'
+      - 'AGENTS.md'
+      - '.gitignore'
+      - '.pre-commit-config.yaml'
+  pull_request:
+    branches:
+      - main
+    paths-ignore:
+      - 'README.md'
+      - 'AGENTS.md'
+      - '.gitignore'
+      - '.pre-commit-config.yaml'
+  workflow_dispatch:  # 手動実行可能
+
+jobs:
+  terraform:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Get Terraform version
+      run: echo "TF_VERSION=$(cat .terraform-version)" >> $GITHUB_ENV
+
+    - name: Setup Terraform
+      uses: hashicorp/setup-terraform@v3
+      with:
+        terraform_version: ${{ env.TF_VERSION }}
+
+    - name: Terraform Init
+      run: terraform init -backend-config="conn_str=${{ secrets.TERRAFORM_BACKEND_CONN_STR }}"
+
+    - name: Terraform Validate
+      run: terraform validate
+
+    - name: Terraform Plan
+      env:
+        TF_VAR_cloudflare_api_token_sinsky_me: ${{ secrets.CLOUDFLARE_TOKEN_SINSKY_ME }}
+        TF_VAR_cloudflare_zone_id_sinsky_me: ${{ secrets.CLOUDFLARE_ZONE_ID_SINSKY_ME }}
+        TF_VAR_cloudflare_api_token_sinsky_cc: ${{ secrets.CLOUDFLARE_TOKEN_SINSKY_CC }}
+        TF_VAR_cloudflare_zone_id_sinsky_cc: ${{ secrets.CLOUDFLARE_ZONE_ID_SINSKY_CC }}
+      run: terraform plan -no-color
+
+    - name: Terraform Apply (only on main branch)
+      if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+      env:
+        TF_VAR_cloudflare_api_token_sinsky_me: ${{ secrets.CLOUDFLARE_TOKEN_SINSKY_ME }}
+        TF_VAR_cloudflare_zone_id_sinsky_me: ${{ secrets.CLOUDFLARE_ZONE_ID_SINSKY_ME }}
+        TF_VAR_cloudflare_api_token_sinsky_cc: ${{ secrets.CLOUDFLARE_TOKEN_SINSKY_CC }}
+        TF_VAR_cloudflare_zone_id_sinsky_cc: ${{ secrets.CLOUDFLARE_ZONE_ID_SINSKY_CC }}
+      run: |
+        terraform apply -auto-approve
