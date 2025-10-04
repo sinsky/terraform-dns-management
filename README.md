@@ -86,13 +86,13 @@ terraform destroy
 ## プロジェクト構造
 
 ```text
- .
+.
 ├── main.tf
 ├── modules/
 │ ├── sinsky.me/       # sinsky.me ドメイン設定
-│ │ ├──  main.tf      # sinsky.me のリソース定義
-│ │ ├──  *.yaml       # sinsky.me のDNSレコード定義
-│ │ └──  variables.tf # sinsky.me の変数宣言
+│ │ ├── main.tf      # sinsky.me のリソース定義
+│ │ ├── *.yaml       # sinsky.me のDNSレコード定義
+│ │ └── variables.tf # sinsky.me の変数宣言
 │ └── sinsky.cc/       # sinsky.cc ドメイン設定
 ├── variables.tf       # ルート変数定義
 ├── terraform.tfvars   # 変数ファイル(Git管理除外)
