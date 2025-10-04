@@ -12,7 +12,8 @@ terraform {
 locals {
   vps         = yamldecode(file("${path.module}/vps.yaml"))
   mail        = yamldecode(file("${path.module}/mail.yaml"))
-  dns_records = merge(local.vps, local.mail)
+  netlify     = yamldecode(file("${path.module}/netlify_dns.yaml"))
+  dns_records = merge(local.vps, local.mail, local.netlify)
 }
 
 provider "cloudflare" {
