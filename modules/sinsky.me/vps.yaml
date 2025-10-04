@@ -1,0 +1,6 @@
+auth:
+  name: auth
+  type: A
+  content: 96.44.158.125
+  proxied: false
+  comment: "PocketID App in RackNerd VPS"
