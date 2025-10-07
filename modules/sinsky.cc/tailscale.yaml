@@ -1,0 +1,27 @@
+app_wildcard:
+  name: "*.app"
+  type: A
+  content: 100.101.162.45
+  proxied: false
+  comment: "App server by Tailscale server"
+
+app:
+  name: app
+  type: A
+  content: 100.101.162.45
+  proxied: false
+  comment: "App server by Tailscale server"
+
+ts_wildcard:
+  name: "*.ts"
+  type: A
+  content: 100.68.0.72
+  proxied: false
+  comment: "Raspberry Pi by Tailscale server"
+
+ts:
+  name: ts
+  type: A
+  content: 100.68.0.72
+  proxied: false
+  comment: "Raspberry Pi by Tailscale server"
