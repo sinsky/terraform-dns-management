@@ -11,7 +11,9 @@ terraform {
 
 locals {
   vps         = yamldecode(file("${path.module}/vps.yaml"))
-  dns_records = merge(local.vps)
+  mail        = yamldecode(file("${path.module}/mail.yaml"))
+  tailscale   = yamldecode(file("${path.module}/tailscale.yaml"))
+  dns_records = merge(local.vps, local.mail, local.tailscale)
 }
 
 provider "cloudflare" {

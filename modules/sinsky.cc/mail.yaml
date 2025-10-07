@@ -1,0 +1,57 @@
+protonmail_dkim1:
+  name: protonmail._domainkey
+  type: CNAME
+  content: protonmail.domainkey.dglyzoia2xlbrc5ilrzvzetedbj4x4dgkstnc7ewxloqohjpupf7a.domains.proton.ch
+  proxied: false
+  comment: "ProtonMail DomainKey"
+
+protonmail_dkim2:
+  name: protonmail2._domainkey
+  type: CNAME
+  content: protonmail2.domainkey.dglyzoia2xlbrc5ilrzvzetedbj4x4dgkstnc7ewxloqohjpupf7a.domains.proton.ch
+  proxied: false
+  comment: "ProtonMail DomainKey"
+
+protonmail_dkim3:
+  name: protonmail3._domainkey
+  type: CNAME
+  content: protonmail3.domainkey.dglyzoia2xlbrc5ilrzvzetedbj4x4dgkstnc7ewxloqohjpupf7a.domains.proton.ch
+  proxied: false
+  comment: "ProtonMail DomainKey"
+
+mx1:
+  name: "@"
+  type: MX
+  content: mail.protonmail.ch
+  priority: 10
+  proxied: false
+  comment: "ProtonMail MX"
+
+mx2:
+  name: "@"
+  type: MX
+  content: mailsec.protonmail.ch
+  priority: 20
+  proxied: false
+  comment: "ProtonMail MX"
+
+dmarc:
+  name: _dmarc
+  type: TXT
+  content: v=DMARC1; p=quarantine
+  proxied: false
+  comment: "ProtonMail DMARC"
+
+spf:
+  name: "@"
+  type: TXT
+  content: v=spf1 include:_spf.protonmail.ch ~all
+  proxied: false
+  comment: "ProtonMail SPF"
+
+protonmail_verification:
+  name: "@"
+  type: TXT
+  content: protonmail-verification=6ab8511f92d0a0626de1c959ad72fa8d45e6743b
+  proxied: false
+  comment: "ProtonMail verification"
