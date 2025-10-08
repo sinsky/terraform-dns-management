@@ -12,6 +12,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v5
       - name: Run Prek checks
-        uses: j178/prek-action@e216c4c287eb0629a8f271855e990c2548d1464a # v1
+        uses: j178/prek-action@91fd7d7cf70ae1dee9f4f44e7dfa5d1073fe6623 # v1
         with:
           extra-args: --skip hadolint-docker
