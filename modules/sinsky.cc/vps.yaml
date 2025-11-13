@@ -16,3 +16,9 @@ tinyauth:
   content: 96.44.158.125
   proxied: false
   comment: "TinyAuth App in RackNerd VPS"
+netvisor:
+  name: netvisor
+  type: A
+  content: 96.44.158.125
+  proxied: false
+  comment: "NetVisor App in RackNerd VPS"
