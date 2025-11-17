@@ -22,3 +22,9 @@ netvisor:
   content: 96.44.158.125
   proxied: false
   comment: "NetVisor App in RackNerd VPS"
+garage-ui:
+  name: garage
+  type: A
+  content: 96.44.158.125
+  proxied: false
+  comment: "S3 garage ui by RackNerd VPS"
