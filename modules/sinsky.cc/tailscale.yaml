@@ -25,3 +25,24 @@ ts:
   content: 100.68.0.72
   proxied: false
   comment: "Raspberry Pi by Tailscale server"
+
+s3:
+  name: s3
+  type: A
+  content: 100.101.162.45
+  proxied: false
+  comment: "S3 by Tailscale server"
+
+s3-admin:
+  name: admin
+  type: A
+  content: 100.101.162.45
+  proxied: false
+  comment: "S3 admin by Tailscale server"
+
+s3-garage:
+  name: garage
+  type: A
+  content: 100.101.162.45
+  proxied: false
+  comment: "S3 garage by Tailscale server"
