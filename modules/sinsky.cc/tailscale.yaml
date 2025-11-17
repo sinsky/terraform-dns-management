@@ -39,10 +39,3 @@ s3-admin:
   content: 100.101.162.45
   proxied: false
   comment: "S3 admin by Tailscale server"
-
-s3-garage:
-  name: garage
-  type: A
-  content: 100.101.162.45
-  proxied: false
-  comment: "S3 garage by Tailscale server"
