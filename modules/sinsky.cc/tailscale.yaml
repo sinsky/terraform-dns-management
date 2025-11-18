@@ -34,7 +34,7 @@ s3:
   comment: "S3 by Tailscale server"
 
 s3-region:
-  name: *.s3
+  name: "*.s3"
   type: A
   content: 100.101.162.45
   proxied: false
