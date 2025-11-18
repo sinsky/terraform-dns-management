@@ -33,6 +33,13 @@ s3:
   proxied: false
   comment: "S3 by Tailscale server"
 
+s3-region:
+  name: *.s3
+  type: A
+  content: 100.101.162.45
+  proxied: false
+  comment: "S3 region by Tailscale server"
+
 s3-admin:
   name: admin
   type: A
