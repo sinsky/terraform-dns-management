@@ -46,3 +46,10 @@ s3-admin:
   content: 100.101.162.45
   proxied: false
   comment: "S3 admin by Tailscale server"
+
+s3-web:
+  name: "*.web"
+  type: A
+  content: 100.101.162.45
+  proxied: false
+  comment: "S3 Web by Tailscale server"
