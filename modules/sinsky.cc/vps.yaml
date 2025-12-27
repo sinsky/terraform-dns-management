@@ -28,3 +28,9 @@ garage-ui:
   content: 96.44.158.125
   proxied: false
   comment: "S3 garage ui by RackNerd VPS"
+pulse:
+  name: status
+  type: A
+  content: 96.44.158.125
+  proxied: false
+  comment: "Pulse by RackNerd VPS"
