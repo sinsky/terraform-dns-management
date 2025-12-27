@@ -53,3 +53,24 @@ s3-web:
   content: 100.101.162.45
   proxied: false
   comment: "S3 Web by Tailscale server"
+
+proxy-pi:
+  name: rpi.proxy
+  type: A
+  content: 100.68.0.72
+  proxied: false
+  comment: "Docker socket proxy by Raspberry Pi"
+
+proxy-app:
+  name: app.proxy
+  type: A
+  content: 100.101.162.45
+  proxied: false
+  comment: "Docker socket proxy by App"
+
+proxy-racknerd:
+  name: racknerd.proxy
+  type: A
+  content: 100.78.235.97
+  proxied: false
+  comment: "Docker socket proxy by Racknerd VPS"
