@@ -43,3 +43,21 @@ verification:
   type: TXT
   content: "sl-verification=ppltankoqmbxspaggmdmcfvbhbsydd"
   comment: "SimpleLogin.io: Proof of Ownership"
+smtp2go-domain:
+  name: em1041139.notify
+  type: CNAME
+  content: return.smtp2go.net
+  comment: "hostname in SMTP2GO"
+  proxied: false
+smtp2go-dkim:
+  name: s1041139._domainkey.notify
+  type: CNAME
+  content: dkim.smtp2go.net
+  comment: "DKIM Record in SMTP2GO"
+  proxied: false
+smtp2go-link:
+  name: link.notify
+  type: CNAME
+  content: track.smtp2go.net
+  comment: "link in SMTP2GO"
+  proxied: false
