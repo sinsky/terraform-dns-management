@@ -12,6 +12,20 @@ app:
   proxied: false
   comment: "App server by Tailscale server"
 
+app_pages:
+  name: pages
+  type: A
+  content: 100.101.162.45
+  proxied: false
+  comment: "App server by Tailscale server"
+
+app_pages_wildcard:
+  name: "*.pages"
+  type: A
+  content: 100.101.162.45
+  proxied: false
+  comment: "App server by Tailscale server"
+
 ts_wildcard:
   name: "*.ts"
   type: A
